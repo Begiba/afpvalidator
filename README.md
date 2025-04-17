@@ -35,6 +35,55 @@ Usage: AfpValidator <afp_file> [-v]
 > [!TIP]
 > Redirect the output to a text file for easy view and analyze.
 
+# Output
+```
+            __   __      __   _ _     _       _
+     /\    / _|  \ \    / /  | (_)   | |     | |
+    /  \  | |_ _ _\ \  / /_ _| |_  __| | __ _| |_ ___  _ __
+   / /\ \ |  _| '_ \ \/ / _` | | |/ _` |/ _` | __/ _ \| '__|
+  / ____ \| | | |_) \  / (_| | | | (_| | (_| | || (_) | |
+ /_/    \_\_| | .__/ \/ \__,_|_|_|\__,_|\__,_|\__\___/|_|
+              | |
+              |_|                      By Began BALAKRISHNAN
+
+
+Analyzing AFP file: .\sampleafp\x2.afp (Size: 67347 bytes)
+
+
+AFP File Analysis Summary:
+-------------------------
+Total structured fields: 35
+Errors detected: 0
+Begin Document found: Yes
+End Document found: Yes
+
+AFP Structure Summary:
+---------------------
+Document structure is properly nested and complete.
+
+Content Summary:
+  - Pages: 1
+  - Objects: 1
+  - Resources: 1
+
+AFP Content Statistics:
+----------------------
+Documents:         1
+Page Groups:       0
+Pages:             2
+Overlays:          0
+Resource Groups:   0
+Presentation Text: 0
+Images:            0
+Graphics:          0
+Barcodes:          0
+Fonts:             0
+Form Definitions:  0
+Page Segments:     0
+
+Validation result: VALID
+```
+
 # Contributing
 Your contributions are highly valued and welcomed! Whether you want to add new features, fix bugs, improve documentation, or simply enhance the overall quality of the tool, your efforts are appreciated. Fork the repository, make your improvements, and submit a pull request. Thank you for helping make AfpValidator better for everyone!
 

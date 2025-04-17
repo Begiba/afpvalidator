@@ -499,6 +499,17 @@ void update_statistics(AFPStatistics *stats, StructuredField *field) {
     else if (field->obj_type == OBJ_PAGSEG) stats->page_segments++;
 }
 
+void print_logo(){
+    //https://patorjk.com/software/taag/#p=testall&f=Big&t=AfpValidator
+    printf("%s\n","            __   __      __   _ _     _       _             ");
+    printf("%s\n","     /\\    / _|  \\ \\    / /  | (_)   | |     | |            ");
+    printf("%s\n","    /  \\  | |_ _ _\\ \\  / /_ _| |_  __| | __ _| |_ ___  _ __ ");
+    printf("%s\n","   / /\\ \\ |  _| '_ \\ \\/ / _` | | |/ _` |/ _` | __/ _ \\| '__|");
+    printf("%s\n","  / ____ \\| | | |_) \\  / (_| | | | (_| | (_| | || (_) | |   ");
+    printf("%s\n"," /_/    \\_\\_| | .__/ \\/ \\__,_|_|_|\\__,_|\\__,_|\\__\\___/|_|   ");
+    printf("%s\n","              | |                                           ");
+    printf("%s\n","              |_|                      By Began BALAKRISHNAN");
+}
 bool validate_afp_file(const char *filename, bool verbose) {
     FILE *file = fopen(filename, "rb");
     if (!file) {
@@ -527,7 +538,8 @@ bool validate_afp_file(const char *filename, bool verbose) {
     file_size = ftell(file);
     rewind(file);
 
-    printf("Analyzing AFP file: %s (Size: %ld bytes)\n\n", filename, file_size);
+    print_logo();
+    printf("\n\nAnalyzing AFP file: %s (Size: %ld bytes)\n\n", filename, file_size);
     
     unsigned char buffer[4];
     long position = 0;
